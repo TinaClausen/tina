@@ -3,8 +3,7 @@ title: Über mich
 navigation: true
 ---
 
-Hier ein **simpler** Text darüber wessen Seite das ist. Man kann **fett**, *kursiv*,
-_unterstrichen_ schreiben.
+Hier ein **simpler** Text darüber wessen Seite das ist. Man kann **fett** und *kursiv* schreiben.
 
 ### Es gibt auch Überschriften.
 
