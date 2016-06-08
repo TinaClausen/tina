@@ -1,0 +1,191 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+@import 'variables';
+
+*, *:after, *:before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.1em;
+
+  color: $black;
+  background: linear-gradient(rgba($primary, .2), rgba($primary, 0.2)),
+              url('../img/sunset.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: bottom;
+
+  margin: 0;
+  padding: 0;
+  padding-bottom: 45px;
+
+  box-sizing: border-box;
+
+  @include media($mobile){
+    font-size: 1em;
+    padding-bottom: 25px;
+  }
+}
+
+a {
+  color: rgba($black, 0.8);
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  font-weight: normal;
+  margin: 0.5em;
+}
+
+address {
+  font-style: normal;
+
+  & > div {
+    margin-bottom: 0.5em;
+  }
+}
+
+.site-header, .site-content, .site-footer {
+  @include outer-container(60%);
+
+  @include media($tablet){
+    @include outer-container(90%);
+  }
+
+  @include media($mobile){
+    @include outer-container(100%);
+  }
+}
+
+.site-header {
+  position: relative;
+  color: $black;
+  text-align: center;
+  text-shadow: 0 0 80px rgba($black, .2);
+  padding: 65px 0;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h1, h2 {
+    font-weight: normal;
+    margin: 0px;
+  }
+
+  nav {
+    position: absolute;
+    z-index: 5;
+    text-align: left;
+    left: 0px;
+    bottom: 5px;
+
+    a {
+      background: rgba($white, 0.6);
+      padding: 5px 15px;
+
+      &.active {
+        background: rgba($white, .85);
+      }
+
+      &:first-child {
+        border-top-left-radius: 5px;
+      }
+
+      &:last-child {
+        border-top-right-radius: 5px;
+      }
+    }
+
+    @include media($mobile){
+      position: fixed;
+      right: -100%;
+      bottom: auto;
+      left: auto;
+      border-radius: 0;
+    }
+  }
+}
+
+.site-content {
+  padding: 25px 45px;
+  background: rgba($white, .85);
+  box-shadow: 0 0 80px rgba($black, 0.2);
+  border-radius: 5px;
+  border-top-left-radius: 0;
+
+  @include media($mobile){
+    padding: 15px 25px;
+    border-radius: 0;
+  }
+
+  aside {
+    max-width: 35%;
+    margin-left: 45px;
+    margin-bottom: 45px;
+    padding: 25px;
+    padding-top: 0;
+    padding-right: 0;
+    float: right;
+    border-left: 1px solid rgba($black, .2);
+    border-bottom: 1px solid rgba($black, .2);
+    border-bottom-left-radius: 5px;
+
+    @include media($mobile){
+      display: block;
+      float: none;
+      padding: 15px;
+      border-left: none;
+      border-radius: 0;
+      max-width: none;
+      margin: 0;
+      margin-bottom: 25px;
+    }
+
+    & > * {
+      border-bottom: 1px solid rgba($black, .2);
+      padding-bottom: 25px;
+      margin-bottom: 15px;
+
+      &:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    address {
+      & > div:first-of-type {
+        text-align: center;
+      }
+    }
+
+    .courses {
+      .time {
+        float: right;
+      }
+
+      p, & > div {
+        margin: 0;
+        margin-bottom: 0.5em;
+      }
+
+      p {
+        font-size: 0.9em;
+      }
+    }
+  }
+}
+
+.site-footer {
+  padding: 15px;
+  text-align: center;
+  font-size: .8em;
+
+  a {
+    text-decoration: none;
+  }
+}

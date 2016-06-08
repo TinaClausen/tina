@@ -1,0 +1,12 @@
+<header class="site-header">
+  <a href="{{ site.baseurl }}/">
+    <h1>{{ site.title }}</h1>
+    <h2>{{ site.subtitle }}</h2>
+  </a>
+
+  <nav>
+      <a href="{{ site.baseurl }}/" {% if "Startseite" == page.title %}class="active"{% endif %}>Startseite</a><!--
+    {% assign navLinks = site.pages|where:"navigation",true %}
+  -->{% for link in navLinks %}<a href="{{ link.url }}" {% if page.title == link.title %}class="active"{% endif %}>{{ link.title }}</a>{% endfor %}
+  </nav>
+</header>

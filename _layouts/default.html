@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+
+    <section class="site-content">
+      <aside class="site-contact">
+        <address>
+          <h3>Kontakt</h3>
+          <div>
+            Königsberger Straße 10</br>
+            24783 Osterrönfeld
+          </div>
+          <div>
+            <b>Tel.</b> 04331 33 52 91</br>
+            <b>Mobil</b> 0176 90 76 19 58
+          </div>
+          <a href="mailto:tina76clausen@googlemail.com">Email senden</a>
+        </address>
+        <div class="courses">
+          <h3>Kurse</h3>
+          <div>
+            <b>Montag <span class="time">11.30-13.00</span></b>
+            <p>entspannt in die Woche starten</p>
+          </div>
+          <div>
+            <b>Dienstag <span class="time">14.30-16.00</span></b>
+            <p>Entspannung für Kinder</p>
+          </div>
+          <div>
+            <b>Freitag <span class="time">19.30-21.00</span></b>
+            <p>Stress lass nach - entspannt ins Wochenende</p>
+          </div>
+          <div>
+            <p>
+              <a href="#">Mehr Info zu den Kursen</a>
+            </p>
+          </div>
+        </div>
+      </aside>
+
+      {{ content }}
+    </section>
+
+    {% include footer.html %}
+  </body>
+</html>
