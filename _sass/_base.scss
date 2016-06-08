@@ -13,7 +13,7 @@ html {
 
 body {
   min-height: 100%;
-  
+
   font-family: 'Quicksand', sans-serif;
   font-size: 1.1em;
 
@@ -31,6 +31,7 @@ body {
   box-sizing: border-box;
 
   @include media($mobile){
+    background-attachment: scroll;
     font-size: 1em;
     padding-bottom: 25px;
   }
