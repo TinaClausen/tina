@@ -5,8 +5,10 @@
   </a>
 
   <nav>
-      <a href="{{ site.baseurl }}/" {% if "Startseite" == page.title %}class="active"{% endif %}>Startseite</a><!--
     {% assign navLinks = site.pages|where:"navigation",true %}
-  -->{% for link in navLinks %}<a href="{{ link.url|prepend:site.baseurl }}" {% if page.title == link.title %}class="active"{% endif %}>{{ link.title }}</a>{% endfor %}
+    <a href="{{ site.baseurl }}/" {% if "Startseite" == page.title %}class="active"{% endif %}>Startseite</a><!--
+  -->{% for link in navLinks %}
+      <a href="{{ link.url|prepend:site.baseurl }}" {% if page.title == link.title %}class="active"{% endif %}>{{ link.title }}</a>
+    {% endfor %}
   </nav>
 </header>
