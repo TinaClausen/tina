@@ -11,8 +11,8 @@ body {
   font-size: 1.1em;
 
   color: $black;
-  background: linear-gradient(rgba($primary, .2), rgba($primary, 0.2)),
-              url('../img/sunset.jpg');
+  background: //linear-gradient(rgba($primary, .2), rgba($primary, 0.2)), doesn't work on Android, create effect with Photoshop
+              url('../img/sunset-tinted.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: bottom;
