@@ -3,4 +3,4 @@ title: Kurse
 navigation: true
 ---
 
-Hier werden mehr Informationen zu den Kursen stehen.
+Hier werden mehr Informationen zu den Kursen stehen. **Bold**, *kursiv*.
